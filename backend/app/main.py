@@ -33,3 +33,7 @@ def upload(file: UploadFile = File(...)):
     info = ingest_file(dst, file.filename)
     return {"message": "ingested", **info}
 
+@app.post("/chat", reponse_model=ChatResponse)
+def chat(req: ChatRequest):
+    out = answer(req.question)
+    return out
