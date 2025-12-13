@@ -39,7 +39,7 @@ def _chunk_text(text: str, chunk_size: int = 900, overlap: int = 150) -> List[st
     return [c for c in chunks if c.strip()]
 
 # text -> vector
-def _embed(texts: List[str]) -> List[List(float)]:
+def _embed(texts: List[str]) -> List[List[float]]:
     """
     Send text to OpenAI embedding model and return the numerical vectors, return object contain data: .embedding and .index
     """
